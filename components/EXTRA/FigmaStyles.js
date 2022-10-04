@@ -529,12 +529,13 @@ export default FigmaStyles = StyleSheet.create({
         color: "#8A9099",
         fontSize: 13,
         fontWeight: "500",
-        
+        textAlign:"right"
     },
     gearTextThree: {
         color: "white",
         fontSize: 17,
         fontWeight: "500",
+        textAlign:"right"
         
     },
     gearIconTouchable: {
@@ -547,7 +548,8 @@ export default FigmaStyles = StyleSheet.create({
     },
     gearBorderLine: {
         borderWidth: 0.5,
-        borderTopColor: "rgba(255,255,255,0.1)",
+        // borderTopColor: "rgba(255,255,255,0.1)",
+        borderColor:"rgba(255,255,255,0.1)",
         marginVertical: 12,
     },
     editbuttonsContainer: {

@@ -2,8 +2,9 @@ import { View, Text, StyleSheet, ScrollView, Image, FlatList, ImageBackground, T
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons' 
 import Feather from 'react-native-vector-icons/Feather'
+import Entypo from 'react-native-vector-icons/Entypo'
 import Octicons from 'react-native-vector-icons/Octicons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import Mapicon from '../Assets/Images/Mapicon.png'
@@ -314,6 +315,7 @@ const Figmaone = () => {
                                 <View>
                                     <Text style={[FigmaStyles.gearTextThree]}>Suit type</Text>
                                     <Text style={[FigmaStyles.gearTextTwo]}>3 mm thick</Text>
+                                  
                                 </View>
                             </View>
                         </View>
@@ -321,16 +323,16 @@ const Figmaone = () => {
                     </View>
                         <View style={FigmaStyles.gearSubContainerThree}>
                         <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <MaterialCommunityIcons name='human' style={{fontSize:30,color:"white"}} />
+                                <FontAwesome5 name='praying-hands' style={{fontSize:28,color:"white"}} />
                                 <View >
-                                    <Text style={[FigmaStyles.gearTextOne,]}>Suit type</Text>
+                                    <Text style={[FigmaStyles.gearTextOne,]}>Fins</Text>
                                 </View>
 
                             </View>
                             <View style={{marginTop:19}} >
                                 <View>
-                                    <Text style={[FigmaStyles.gearTextThree]}>Suit type</Text>
-                                    <Text style={[FigmaStyles.gearTextTwo]}>3 mm thick</Text>
+                                    <Text style={[FigmaStyles.gearTextThree]}>Mares</Text>
+                                    <Text style={[FigmaStyles.gearTextTwo]}>Avanti Superchannel</Text>
                                 </View>
                             </View>
                         </View>
@@ -338,16 +340,16 @@ const Figmaone = () => {
                     </View>
                         <View style={FigmaStyles.gearSubContainerFour}>
                         <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <MaterialCommunityIcons name='human' style={{fontSize:30,color:"white"}} />
+                                <Entypo name='mask' style={{fontSize:30,color:"white"}} />
                                 <View >
-                                    <Text style={[FigmaStyles.gearTextOne,]}>Suit type</Text>
+                                    <Text style={[FigmaStyles.gearTextOne,]}>Mask</Text>
                                 </View>
 
                             </View>
                             <View style={{marginTop:23}} >
                                 <View>
-                                    <Text style={[FigmaStyles.gearTextThree]}>Suit type</Text>
-                                    <Text style={[FigmaStyles.gearTextTwo]}>3 mm thick</Text>
+                                    <Text style={[FigmaStyles.gearTextThree]}>Scuba Pro</Text>
+                                    <Text style={[FigmaStyles.gearTextTwo]}>Synergy Twin Trufit</Text>
                                 </View>
                             </View>
                         </View>
@@ -355,22 +357,22 @@ const Figmaone = () => {
                     </View>
                         <View style={FigmaStyles.gearSubContainerFive}>
                         <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <MaterialCommunityIcons name='human' style={{fontSize:30,color:"white"}} />
+                                <Ionicons name='ios-watch-sharp' style={{fontSize:30,color:"white"}} />
                                 <View >
-                                    <Text style={[FigmaStyles.gearTextOne,]}>Suit type</Text>
+                                    <Text style={[FigmaStyles.gearTextOne,]}>Regulator 2nd</Text>
                                 </View>
 
                             </View>
                             <View style={{marginTop:23}} >
                                 <View>
-                                    <Text style={[FigmaStyles.gearTextThree]}>Suit type</Text>
-                                    <Text style={[FigmaStyles.gearTextTwo]}>3 mm thick</Text>
+                                    <Text style={[FigmaStyles.gearTextThree]}>Brand</Text>
+                                    <Text style={[FigmaStyles.gearTextTwo]}>Model</Text>
                                 </View>
                             </View>
                         </View>
                      
                     </View>
-                    {/* <View style={FigmaStyles.verifyMainContainer}>
+                    <View style={FigmaStyles.verifyMainContainer}>
                         <View style={FigmaStyles.verifySubContainer}>
                             <View style={{ flexDirection: "row" }}>
                                 <Ionicons name='checkmark-circle' style={[FigmaStyles.verifyIcon]} size={24} />
@@ -380,8 +382,8 @@ const Figmaone = () => {
                                 <Text style={[FigmaStyles.verifyTextTwo]}>Jan 17, 2020 • 12:01 AM</Text>
                             </View>
                         </View>
-                    </View> */}
-                    {/* <View style={[FigmaStyles.ollieMainContainer]}>
+                    </View>
+                    <View style={[FigmaStyles.ollieMainContainer]}>
                         <View style={FigmaStyles.ollieSubContainer}>
                             <View style={{ flexDirection: "row", alignItems: "center" }}>
                                 <Image source={Bitmap} style={[FigmaStyles.olliImage]} />
@@ -399,10 +401,10 @@ const Figmaone = () => {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                    </View> */}
-                    {/* <View style={[FigmaStyles.diveshopBorderLine]}>
-                    </View> */}
-                    {/* <View style={[FigmaStyles.diveShopMainContainer]}>
+                    </View>
+                    <View style={[FigmaStyles.diveshopBorderLine]}>
+                    </View>
+                    <View style={[FigmaStyles.diveShopMainContainer]}>
                         <View style={[FigmaStyles.diveShopSubContainer]}>
                             <Text style={[FigmaStyles.diveShopTextOne]}>Dive Shop</Text>
                             <View>
@@ -425,7 +427,7 @@ const Figmaone = () => {
                             <Text style={[FigmaStyles.deleteLogButtonText]}>Delete</Text>
                         </View>
 
-                    </View> */}
+                    </View>
                 </View>
 
 
