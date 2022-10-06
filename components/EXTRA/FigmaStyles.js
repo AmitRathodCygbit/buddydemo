@@ -225,6 +225,7 @@ export default FigmaStyles = StyleSheet.create({
     },
     timeSubContainer: {
         flexDirection: "row",
+        // backgroundColor:"red"
     },
     timeSection1: {
         flex: 1
@@ -307,22 +308,24 @@ export default FigmaStyles = StyleSheet.create({
 
     graphContainer1: {
         flexDirection: "row"
+
     },
     graphContainer2: {
-        //   backgroundColor:"pink",
         marginVertical: 27,
-        //   paddingVertical:50
-        // justifyContent:"center"
-
     },
     graphImage: {
         resizeMode: 'contain',
         height: 135,
-        width: '100%'
+        width: '100%',
+
     },
     LineImage: {
         width: '100%',
-        marginVertical: 70
+        position: 'absolute',
+        top: 50,
+        left: 0,
+        right: 0,
+        bottom: 0,
     },
     graphSection2: {
 
@@ -411,6 +414,11 @@ export default FigmaStyles = StyleSheet.create({
         marginHorizontal: 12,
         paddingHorizontal: 12,
         marginVertical: 14
+    },
+    ImagesWithScrollView: {
+        height: 101,
+        width: 101,
+        marginHorizontal: 12
     },
     airMainContainer: {
         marginHorizontal: 12,
@@ -529,14 +537,65 @@ export default FigmaStyles = StyleSheet.create({
         color: "#8A9099",
         fontSize: 13,
         fontWeight: "500",
-        textAlign:"right"
+        textAlign: "right"
     },
     gearTextThree: {
         color: "white",
         fontSize: 17,
         fontWeight: "500",
-        textAlign:"right"
-        
+        textAlign: "right"
+
+    },
+    gearView: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 17
+    },
+    suitView: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 25
+    },
+    suitViewTwo: {
+        marginTop: 11
+    },
+    suitIconStyle: {
+        fontSize: 30,
+        color: "white"
+    },
+    finsView: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 6
+    },
+    finsIconStyle: {
+        fontSize: 28,
+        color: "white"
+    },
+
+    maskView: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 6
+    },
+    mastIconStyle: {
+        fontSize: 30,
+        color: "white"
+    },
+
+    regulatorView: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 6,
+        marginBottom: 18
+    },
+    regulatorIconStyle: {
+        fontSize: 30,
+        color: "white"
+    },
+    geariconStyle: {
+        fontSize: 30,
+        color: "white"
     },
     gearIconTouchable: {
         backgroundColor: 'rgba(255,255,255,0.1)',
@@ -549,7 +608,7 @@ export default FigmaStyles = StyleSheet.create({
     gearBorderLine: {
         borderWidth: 0.5,
         // borderTopColor: "rgba(255,255,255,0.1)",
-        borderColor:"rgba(255,255,255,0.1)",
+        borderColor: "rgba(255,255,255,0.1)",
         marginVertical: 12,
     },
     editbuttonsContainer: {
@@ -604,6 +663,7 @@ export default FigmaStyles = StyleSheet.create({
     },
     verifyIcon: {
         color: "#8FBF30",
+        fontSize: 24
     },
     verifyTextOne: {
         color: "white",

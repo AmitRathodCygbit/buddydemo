@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet, ScrollView, Image, FlatList, ImageBackground, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image, FlatList, ImageBackground, TouchableOpacity, } from 'react-native'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons' 
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import Feather from 'react-native-vector-icons/Feather'
 import Entypo from 'react-native-vector-icons/Entypo'
 import Octicons from 'react-native-vector-icons/Octicons'
@@ -18,34 +18,26 @@ import Graph from '../Assets/Images/Graph.png'
 import Line2 from '../Assets/Images/Line2.png'
 import Mapbg from '../Assets/Images/Mapbg.png'
 import FigmaStyles from './FigmaStyles';
-
+import Flatlistdata from './Flatlistdata'
 const Figmaone = () => {
-    const styledataone = [
-        { name: "wreck" },
-        { name: "artificial reef" },
-        { name: "coral reef" },
-    ]
+
+
     return (
         <View style={[FigmaStyles.mainContainer]}>
             <Image source={Mapbg} style={[FigmaStyles.mapBgImage]} resizeMode="cover" />
             <ScrollView>
-                {/* header container start */}
                 <View style={[FigmaStyles.subContainerOne]}>
-
                     <View style={[FigmaStyles.TopIconContainer]}>
                         <View style={[FigmaStyles.chevronBackIconContainer]}>
                             <Ionicons name='chevron-back-circle-sharp' style={[FigmaStyles.chevronBackIcon]} />
                         </View>
-
                         <View style={[FigmaStyles.shareIcon]}>
                             <Text style={[FigmaStyles.shareIconText]}>Share</Text>
                         </View>
-
                         <View>
                             <MaterialCommunityIcons name='dots-horizontal-circle' style={[FigmaStyles.dotIcon]} />
                         </View>
                     </View>
-
                     <View style={[FigmaStyles.mapConatiner]}>
                         <Image source={Mapicon} style={[FigmaStyles.mapIconStyleOne]} />
                     </View>
@@ -73,7 +65,6 @@ const Figmaone = () => {
                 </View>
 
                 <View style={[FigmaStyles.mainContainer2]}>
-
                     <View style={[FigmaStyles.section1]}>
                         <View>
                             <View style={[FigmaStyles.section1SubContainer]}>
@@ -84,7 +75,6 @@ const Figmaone = () => {
                                     <Text style={[FigmaStyles.quinnTextOne]}>Quinn Favre</Text>
                                     <Text style={[FigmaStyles.quinnTextTwo]}>PADI Open Water Diver</Text>
                                 </View>
-
                             </View>
                             <View Style={[FigmaStyles.section2]}>
                                 <Text style={[FigmaStyles.section2TextOne]}>August 17, 2020</Text>
@@ -93,10 +83,7 @@ const Figmaone = () => {
                                 <Text style={[FigmaStyles.section2TextTwo]}>With</Text>
                                 <Text style={[FigmaStyles.section2TextThree]}>Dive Center Oahu</Text>
                             </View>
-
-
                         </View>
-
                         <View style={[FigmaStyles.scubaSection]} >
                             <View style={[FigmaStyles.scubaIconContainer]}>
                                 <View style={[FigmaStyles.scubaIconView]} >
@@ -105,20 +92,8 @@ const Figmaone = () => {
                                 <Text style={{ color: "white" }}>Scuba</Text>
                             </View>
                         </View>
-
                     </View>
-                    <FlatList
-                        contentContainerStyle={[FigmaStyles.section3]}
-                        data={[...styledataone]}
-                        renderItem={
-                            (element) => {
-                                return <View style={[FigmaStyles.diffrentTags]}>
-                                    <Text style={[FigmaStyles.TagText]}>{element.item.name}</Text>
-                                </View>
-
-                            }
-                        }
-                    />
+                    <Flatlistdata />
                     <View style={[FigmaStyles.timeMainContainer]}>
                         <View style={[FigmaStyles.timeSubContainer]}>
                             <View style={[FigmaStyles.timeSection1]}>
@@ -128,7 +103,6 @@ const Figmaone = () => {
                                     <View style={{ justifyContent: "center" }}>
                                         <Text style={[FigmaStyles.timeSubSection1Text]}>Time</Text>
                                     </View>
-
                                 </View>
 
                                 <View style={[FigmaStyles.timeSubSection2]}>
@@ -139,11 +113,8 @@ const Figmaone = () => {
                                     <Text style={[FigmaStyles.timeSubSection2TextOne]}>Bottom</Text>
                                     <Text style={[FigmaStyles.timeSubSection2TextTwo]}>25 min</Text>
                                 </View>
-
-
                             </View>
                             <View style={[FigmaStyles.timeSection2]}>
-
                                 <View style={[FigmaStyles.timeSubSection2]}>
                                     <Text style={[FigmaStyles.timeSection2TextOne]}>Out</Text>
                                     <Text style={[FigmaStyles.timeSubSection2TextTwo]}>10:45 AM</Text>
@@ -153,14 +124,13 @@ const Figmaone = () => {
                                     <Text style={[FigmaStyles.timeSubSection2TextTwo]}>44 min</Text>
                                 </View>
                             </View>
-
                         </View>
                     </View>
 
                     <View style={[FigmaStyles.graphMainContainer]}>
                         <View>
                             <View style={[FigmaStyles.graphSection1]}>
-                                {/* two icon in column */}
+
                                 <View style={[FigmaStyles.graphContainer1]}>
                                     <View style={[FigmaStyles.graphSubSection1]}>
                                         <MaterialCommunityIcons name='wave' style={[FigmaStyles.WaveIcon]} />
@@ -170,17 +140,14 @@ const Figmaone = () => {
                                     <View ><Text style={[FigmaStyles.graphTextDepth]}>Depth</Text></View>
 
                                 </View>
-                                { /* text in row */}
+
 
                             </View>
 
                             <View style={[FigmaStyles.graphSection2]}>
                                 <View style={[FigmaStyles.graphContainer2]}>
-                                    <ImageBackground source={Graph} style={[FigmaStyles.graphImage, {
-
-                                    }]} >
-                                        <Image source={Line2} style={[FigmaStyles.LineImage]} />
-                                    </ImageBackground>
+                                    <Image source={Graph} style={[FigmaStyles.graphImage, {}]} />
+                                    <Image source={Line2} style={[FigmaStyles.LineImage]} />
                                 </View>
                             </View>
 
@@ -222,19 +189,19 @@ const Figmaone = () => {
                         <ScrollView horizontal={true}>
 
                             <View>
-                                <Image source={Clownfish} style={{ height: 101, width: 101, marginHorizontal: 12 }} />
+                                <Image source={Clownfish} style={[FigmaStyles.ImagesWithScrollView]} />
                                 <Text style={[FigmaStyles.marineImageText]}>Clown fish</Text>
                             </View>
                             <View>
-                                <Image source={Seaturtle} style={{ height: 101, width: 101, marginHorizontal: 12 }} />
+                                <Image source={Seaturtle} style={[FigmaStyles.ImagesWithScrollView]} />
                                 <Text style={[FigmaStyles.marineImageText]}>Sea turtle</Text>
                             </View>
                             <View>
-                                <Image source={MantaRay} style={{ height: 101, width: 101, marginHorizontal: 12 }} />
+                                <Image source={MantaRay} style={[FigmaStyles.ImagesWithScrollView]} />
                                 <Text style={[FigmaStyles.marineImageText]}>Manta Ray</Text>
                             </View>
                             <View>
-                                <Image source={Pufferfish} style={{ height: 101, width: 101, marginHorizontal: 12 }} />
+                                <Image source={Pufferfish} style={[FigmaStyles.ImagesWithScrollView]} />
                                 <Text style={[FigmaStyles.marineImageText]}>Puffer fish</Text>
                             </View>
 
@@ -286,50 +253,49 @@ const Figmaone = () => {
 
                     </View>
                     <View style={[FigmaStyles.gearContainer]}>
-                  
+
                         <View style={FigmaStyles.gearSubContainerOne}>
-                            <View style={{ flexDirection: "row", alignItems: "center",marginTop:17 }}>
-                                <MaterialCommunityIcons name='gamepad-circle-outline' style={{fontSize:30,color:"white"}} />
+                            <View style={[FigmaStyles.gearView]}>
+                                <MaterialCommunityIcons name='gamepad-circle-outline' style={[FigmaStyles.geariconStyle]} />
                                 <View >
                                     <Text style={[FigmaStyles.gearTextOne]}>Gear</Text>
                                 </View>
-
                             </View>
                             <View >
                                 <TouchableOpacity style={[FigmaStyles.gearIconTouchable]}
                                 >
                                     <Ionicons name='chevron-up' style={[FigmaStyles.olliChevronIcon]} />
-                                    
+
                                 </TouchableOpacity>
                             </View>
                         </View>
                         <View style={FigmaStyles.gearSubContainerTwo}>
-                        <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <MaterialCommunityIcons name='human' style={{fontSize:30,color:"white"}} />
+                            <View style={[FigmaStyles.suitView]}>
+                                <MaterialCommunityIcons name='human' style={[FigmaStyles.suitIconStyle]} />
                                 <View >
                                     <Text style={[FigmaStyles.gearTextOne,]}>Suit type</Text>
                                 </View>
 
                             </View>
-                            <View style={{marginTop:19}} >
+                            <View style={[FigmaStyles.suitViewTwo]} >
                                 <View>
                                     <Text style={[FigmaStyles.gearTextThree]}>Suit type</Text>
                                     <Text style={[FigmaStyles.gearTextTwo]}>3 mm thick</Text>
-                                  
+
                                 </View>
                             </View>
                         </View>
                         <View style={[FigmaStyles.gearBorderLine]}>
-                    </View>
+                        </View>
                         <View style={FigmaStyles.gearSubContainerThree}>
-                        <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <FontAwesome5 name='praying-hands' style={{fontSize:28,color:"white"}} />
+                            <View style={[FigmaStyles.finsView]}>
+                                <FontAwesome5 name='praying-hands' style={[FigmaStyles.finsIconStyle]} />
                                 <View >
                                     <Text style={[FigmaStyles.gearTextOne,]}>Fins</Text>
                                 </View>
 
                             </View>
-                            <View style={{marginTop:19}} >
+                            <View>
                                 <View>
                                     <Text style={[FigmaStyles.gearTextThree]}>Mares</Text>
                                     <Text style={[FigmaStyles.gearTextTwo]}>Avanti Superchannel</Text>
@@ -337,16 +303,16 @@ const Figmaone = () => {
                             </View>
                         </View>
                         <View style={[FigmaStyles.gearBorderLine]}>
-                    </View>
+                        </View>
                         <View style={FigmaStyles.gearSubContainerFour}>
-                        <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <Entypo name='mask' style={{fontSize:30,color:"white"}} />
+                            <View style={[FigmaStyles.maskView]}>
+                                <Entypo name='mask' style={[FigmaStyles.mastIconStyle]} />
                                 <View >
                                     <Text style={[FigmaStyles.gearTextOne,]}>Mask</Text>
                                 </View>
 
                             </View>
-                            <View style={{marginTop:23}} >
+                            <View >
                                 <View>
                                     <Text style={[FigmaStyles.gearTextThree]}>Scuba Pro</Text>
                                     <Text style={[FigmaStyles.gearTextTwo]}>Synergy Twin Trufit</Text>
@@ -354,28 +320,28 @@ const Figmaone = () => {
                             </View>
                         </View>
                         <View style={[FigmaStyles.gearBorderLine]}>
-                    </View>
+                        </View>
                         <View style={FigmaStyles.gearSubContainerFive}>
-                        <View style={{ flexDirection: "row", alignItems: "center",marginTop:36 }}>
-                                <Ionicons name='ios-watch-sharp' style={{fontSize:30,color:"white"}} />
+                            <View style={[FigmaStyles.regulatorView]}>
+                                <Ionicons name='ios-watch-sharp' style={[FigmaStyles.regulatorIconStyle]} />
                                 <View >
                                     <Text style={[FigmaStyles.gearTextOne,]}>Regulator 2nd</Text>
                                 </View>
 
                             </View>
-                            <View style={{marginTop:23}} >
-                                <View>
+                            <View>
+                                <View style={[{ marginBottom: 12 }]}>
                                     <Text style={[FigmaStyles.gearTextThree]}>Brand</Text>
                                     <Text style={[FigmaStyles.gearTextTwo]}>Model</Text>
                                 </View>
                             </View>
                         </View>
-                     
+
                     </View>
                     <View style={FigmaStyles.verifyMainContainer}>
                         <View style={FigmaStyles.verifySubContainer}>
                             <View style={{ flexDirection: "row" }}>
-                                <Ionicons name='checkmark-circle' style={[FigmaStyles.verifyIcon]} size={24} />
+                                <Ionicons name='checkmark-circle' style={[FigmaStyles.verifyIcon]} />
                                 <Text style={[FigmaStyles.verifyTextOne]}>Verified</Text>
                             </View>
                             <View>
@@ -397,7 +363,7 @@ const Figmaone = () => {
                                 <TouchableOpacity style={[FigmaStyles.olliIconTouchable]}
                                 >
                                     <Ionicons name='md-chevron-forward-outline' style={[FigmaStyles.olliChevronIcon]} />
-                                    
+
                                 </TouchableOpacity>
                             </View>
                         </View>
